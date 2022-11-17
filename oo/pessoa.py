@@ -19,6 +19,10 @@ if __name__ == '__main__':
     for filho in levy.filhos:
         print(filho.nome)
 
-    print(levy.filhos)
+    heber.sobrenome = 'Almeida'
+    del heber.filhos
+    print(heber.__dict__)
+    print(levy.__dict__)
 
-    print(levy.nome)
+
+
