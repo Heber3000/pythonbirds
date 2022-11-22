@@ -27,7 +27,7 @@ class Ponto():
 class Fase():
     def __init__(self, intervalo_de_colisao=1):
         """
-        Método que inicializa uma fase.
+        Método que Inicializa uma fase.
 
         :param intervalo_de_colisao:
         """
