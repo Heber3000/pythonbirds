@@ -1,8 +1,5 @@
 
-
-
-"""
-Você deve  criar uma classe carro que vai possuir dois atributos compostos por outras classes duas classes
+"""Você deve  criar uma classe carro que vai possuir dois atributos compostos por outras classes duas classes
 1) Motor
 2) Direção
 
