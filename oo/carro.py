@@ -92,6 +92,36 @@ A Direção terá responsabilidade de controlar a direção. Ela oferece os segu
     >>> carro.calcular_direcao()
     'Oeste'
 """
+
+class Carro:
+    def __init__(self,direcao,motor):
+        self.motor = motor
+        self.direcao = direcao
+
+    def calcular_velocidade(self):
+        return self.motor.velocidade
+
+    def acelerar(self):
+        self.motor.acelerar()
+
+    def frear(self):
+        self.motor.frear()
+
+    def calcular_direcao(self):
+        return self.direcao.valor
+
+    def girar_a_direita(self):
+        self.direcao.girar_a_direita()
+
+    def girar_a_esquerda(self):
+        self.direcao.girar_a_esquerda()
+
+
+
+
+
+
+
 class Motor:
     def __init__(self):
         self.velocidade = 0
@@ -128,102 +158,6 @@ class Direcao:
 
     def girar_a_esquerda(self):
         self.valor = self.rotacao_a_esquerda_dct[self.valor]
-
-
-
-
-
-
-
-# Resolução Heber
-"""
-class Motor:
-    def __init__(self,velocidade):
-        self.velocidade = velocidade
-
-    def acelerar(self):
-        self.velocidade += 1
-
-    def frear(self):
-        if self.velocidade > 2:
-            self.velocidade -= 2
-        elif self.velocidade == 1:
-            self.velocidade -=1
-
-
-# Testando Motor
-if __name__ == '__main__':
-    motor = Motor(0)
-    motor.acelerar()
-    print(motor.velocidade)
-    motor.acelerar()
-    print(motor.velocidade)
-    motor.acelerar()
-    print(motor.velocidade)
-    motor.frear()
-    print(motor.velocidade)
-    motor.frear()
-    print(motor.velocidade)
-
-
-
-
-class Direcao:
-    def __init__(self,valor):
-        self.valor = valor
-
-
-    def girar_direita(self):
-        if self.valor == 'Norte':
-            self.valor = 'Oeste'
-        elif self.valor == 'Oeste':
-            self.valor = 'Sul'
-        elif self.valor == 'Sul':
-            self.valor = 'Leste'
-        else:
-            self.valor = 'Norte'
-
-
-    def girar_esquerda(self):
-        if self.valor == 'Norte':
-            self.valor = 'Leste'
-        elif self.valor == 'Leste':
-            self.valor = 'Sul'
-        elif self.valor == 'Sul':
-            self.valor = 'Oeste'
-        else:
-            self.valor = 'Norte'
-
-print()
-
-if __name__ == '__main__':
-    direcao = Direcao('Norte')
-    direcao.girar_direita()
-    print(direcao.valor)
-    direcao.girar_direita()
-    print(direcao.valor)
-    direcao.girar_direita()
-    print(direcao.valor)
-    direcao.girar_direita()
-    print(direcao.valor)
-
-
-
-    print('')
-
-
-
-
-    direcao.girar_esquerda()
-    print(direcao.valor)
-    direcao.girar_esquerda()
-    print(direcao.valor)
-    direcao.girar_esquerda()
-    print(direcao.valor)
-    direcao.girar_esquerda()
-    print(direcao.valor)
-"""
-
 
 
 
