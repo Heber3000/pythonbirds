@@ -6,14 +6,25 @@ class Pessoa:
         self.nome = nome
         self.filhos = list(filhos)
 
-
-
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        f'{cls} - olhos {cls.olhos}'
+
+
+class Homem(Pessoa):
+    pass
+
+
 if __name__ == '__main__':
-    heber = Pessoa(nome='Heber')
-    levy = Pessoa(heber,nome='Levy')
+    heber = Homem(nome='Heber')
+    levy = Homem(heber,nome='Levy')
     print(Pessoa.cumprimentar(levy))
     print(id(levy))
     print(levy.cumprimentar())
@@ -32,6 +43,11 @@ if __name__ == '__main__':
     print(heber.olhos)
     print(levy.olhos)
     print(id(Pessoa.olhos), id(heber.olhos), id(levy.olhos))
+    pessoa = Pessoa('Anônimo')
+    print(isinstance(pessoa,Pessoa))
+    print(isinstance(pessoa, Homem))
+    print(isinstance(levy, Homem))
+    print(isinstance(levy, Pessoa))
 
 
 
